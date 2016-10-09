@@ -12,14 +12,18 @@
     </div>
 </div>
 
-<%= form_for(@message) do |f| %>
+<%= form_for @message, html: {class:"form-horizontal"} do |f| %>
 <div class="form-group">
-    <label>名前：</label>
-    <%= f.text_area :name, :size => "20x1", placeholder:"名前を入力してください" %>
+    <label class="col-sm-2 control-label">名前：</label>
+    <div class="col-sm-10">
+      <%= f.text_field :name, class:"form-control", placeholder:"名前を入力してください" %>
+    </div>
 </div>
 <div class="form-group">
-    <label>内容：</label>
-    <%= f.text_area :body, :size => "30x1", placeholder:"内容を入力してください" %>
+    <label class="col-sm-2 control-label">内容：</label>
+    <div class="col-sm-10">
+      <%= f.text_area :body, :size => "30x1", class:"form-control", placeholder:"内容を入力してください" %>
+    </div>
 </div>        
 <%= f.submit class: "btn btn-sm btn-primary" %>
 <% end %>
