@@ -1,16 +1,13 @@
-<div class="panel panel-default">
+<div class="panel panel-primary">
   <div class="panel-heading">
-    メッセージ一覧
+    <h1 class="panel-title">メッセージ一覧</h1>
   </div>
     
   <div class="panel-body">
-    
     <% @messages.each do |message| %>
-    
       <span class="label label-info">
         <%= message.name %>
       </span>
-      
       <%= message.body %>
       
       (
@@ -21,9 +18,7 @@
       <br>
       
     <% end %>
-    
   </div>
-  
 </div>
 
 <%= render 'form' %>
