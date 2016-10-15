@@ -6,3 +6,4 @@ class Message < ActiveRecord::Base
     #内容は必須入力かつ２文字以上３０文字以下
     validates :body, length: { minimum: 2, maximum: 30 }, presence: true
 end
+
